@@ -17,6 +17,7 @@ BuildRequires:  libappstream-glib
 BuildRequires:  meson
 BuildRequires:  vala >= 0.22.0
 
+BuildRequires:  fdupes
 BuildRequires:  pkgconfig(glib-2.0) >= 2.32
 BuildRequires:  pkgconfig(gobject-2.0)
 BuildRequires:  pkgconfig(granite) >= 6.0.0
@@ -42,6 +43,7 @@ A wingpanel indicator for Night Light.
 
 %install
 %meson_install
+%fdupes %buildroot/usr/share/locale
 
 %find_lang nightlight-indicator
 
